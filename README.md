@@ -1,4 +1,4 @@
 # [Cryptonit-BOT](Cryptonit-BOT)
 
 
-![Alt](data/demo_cryptonit_bot.gif)
+![Alt](data/demo_cryptonit.gif)
