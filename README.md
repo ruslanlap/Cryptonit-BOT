@@ -1,2 +1,2 @@
 # [Cryptonit-BOT](Cryptonit-BOT)
-# ![Alt](data/demo-cryptonit_bot.mp4)
+![Alt](data/demo-cryptonit_bot.mp4)
