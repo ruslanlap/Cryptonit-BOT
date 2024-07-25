@@ -113,6 +113,7 @@
     |   ├── bot.png
     │   └── start.png
     └── requirements.txt
+    └── LICENSE
 ```
 
 ---
