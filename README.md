@@ -183,7 +183,8 @@ Use the following command to run Cryptonit-BOT:
 ```sh
 python cryptonit.py
 ```
-
+![Alt](data/start.png)
+![Alt](data/process.png)
 ---
 
 ## 🛠 Project Roadmap
