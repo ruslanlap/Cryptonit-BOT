@@ -49,8 +49,10 @@
 ---
 
 ## 📦 Features
+<details>
+<summary>Features</summary>
 
-- **Environment Variable Configuration**:
+  - **Environment Variable Configuration**:
   - Securely retrieves the bot token from an environment variable, ensuring sensitive data is not hard-coded in the source code.
 
 - **Password-based Encryption and Decryption**:
@@ -89,6 +91,10 @@
 
 - **User-friendly Interface**:
   - Offers a guided step-by-step interaction for encryption and decryption processes, ensuring ease of use.
+
+</details>
+
+
 ---
 
 ## 📂 Repository Structure
@@ -111,16 +117,18 @@
 
 ---
 
-## 🧩 Modules
+🧩 Modules
+<details>
+<summary>Dependencies</summary>
 
-<details closed><summary>Dependencies
+    telebot
+    cryptography
+    base64
+    uuid
+    os
+    logging
 
-    - telebot
-    - cryptography
-    - base64
-    - uuid
-    - os
-    - logging</summary>
+</details>
 
 The project requires the following Python packages:
 
@@ -183,8 +191,9 @@ Use the following command to run Cryptonit-BOT:
 ```sh
 python cryptonit.py
 ```
-![Alt](data/start.png)
 ![Alt](data/process.png)
+![Alt](data/start.png)
+
 ---
 
 ## 🛠 Project Roadmap
