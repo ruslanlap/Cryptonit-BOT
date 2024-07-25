@@ -51,7 +51,55 @@
 
 ## 📦 Features
 
-<code>► INSERT-TEXT-HERE</code>
+<code>► Environment Variable Configuration:
+
+    Securely retrieves the bot token from an environment variable, ensuring sensitive data is not hard-coded in the source code.
+
+Password-based Encryption and Decryption:
+
+    Uses PBKDF2HMAC with SHA256 to derive encryption keys from passwords.
+    Encrypts and decrypts messages using AES in CBC mode with PKCS7 padding.
+
+Secure Key and IV Generation:
+
+    Generates secure random salt and initialization vectors (IV) for each encryption operation to ensure security.
+
+Bot Functionality:
+
+    Start and Help Commands:
+        Provides a welcome message and instructions for using the bot.
+    Encrypt Command:
+        Prompts the user for a password and the message to encrypt.
+        Returns the encrypted message and saves it to a file.
+    Decrypt Command:
+        Prompts the user for a password and the encrypted message.
+        Returns the decrypted message and saves it to a file.
+
+File Handling:
+
+    Saves encrypted and decrypted messages along with the passwords used to respective files.
+    Includes functionality to read and append additional instructions from a separate file if it exists.
+
+MarkdownV2 Escape:
+
+    Escapes special characters in messages to ensure proper formatting when using Telegram's MarkdownV2.
+
+Custom Keyboard Creation:
+
+    Provides a custom keyboard with options for encrypting, decrypting, and getting help.
+
+Error Handling and Logging:
+
+    Logs warnings and errors during file operations to help diagnose issues.
+    Provides user-friendly error messages in case of decryption failures.
+
+File Sending:
+
+    Sends the encrypted or decrypted message files back to the user as a document via Telegram.
+
+User-friendly Interface:
+
+    Offers a guided step-by-step interaction for encryption and decryption processes, ensuring ease of use.</code>
 
 ---
 
