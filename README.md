@@ -45,7 +45,6 @@
 ![Alt](data/1.gif)
 ![Alt](data/2.gif)
 ![Alt](data/4.gif)
-<code>► INSERT-TEXT-HERE</code>
 
 ---
 
@@ -105,6 +104,7 @@
     │   ├── 2.gif
     │   ├── 4.gif
     │   ├── process.png
+    |   ├── bot.png
     │   └── start.png
     └── requirements.txt
 ```
@@ -113,8 +113,14 @@
 
 ## 🧩 Modules
 
-<details closed><summary>.</summary>
-Dependencies
+<details closed><summary>Dependencies
+
+    - telebot
+    - cryptography
+    - base64
+    - uuid
+    - os
+    - logging</summary>
 
 The project requires the following Python packages:
 
@@ -135,11 +141,11 @@ The project requires the following Python packages:
 
 Ensure you have the following dependencies installed on your system:
 
-* **Python**: `version x.y.z`
+* **Python**: `version --last`
 
 ### ⚙️ Installation
 
-1. Clone the Cryptonit-BOT repository:
+1. Clone BOT [the Cryptonit-BOT repository]:
 
 ```sh
 git clone https://github.com/ruslanlap/Cryptonit-BOT
@@ -151,16 +157,14 @@ git clone https://github.com/ruslanlap/Cryptonit-BOT
 cd Cryptonit-BOT
 ```
 
-4. Install the dependencies:
-
-
+3. Install the dependencies:
 ```sh
 pip install -r requirements.txt
 ```
-3. Install the dependencies:
+4. export TELEGRAM token:
 
 ```sh
-pip install -r requirements.txt
+export YOUR_BOT_TOKEN=<generated token here>
 ```
 
 ## Telegram Token Setup
@@ -176,12 +180,6 @@ To use Cryptonit-BOT with Telegram, you need to obtain a bot token. Follow these
 
 ### 🤖 Running Cryptonit-BOT
 Use the following command to run Cryptonit-BOT:
-```
-python cryptonit.py
-```
-
-
-
 ```sh
 python cryptonit.py
 ```
@@ -191,7 +189,7 @@ python cryptonit.py
 ## 🛠 Project Roadmap
 
 - [X] `► Cooming soon`
-- [ ] `► `
+- [ ] `► add more features`
 - [ ] `► ...`
 
 ---
