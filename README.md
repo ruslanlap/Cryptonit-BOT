@@ -39,7 +39,7 @@
 > - [👏 Acknowledgments](#-acknowledgments)
 
 ---
-## Eeary run
+## Easy start
 just follow this steps for use cryptonitbot
 1.
 ```bash
