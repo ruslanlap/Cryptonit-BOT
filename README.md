@@ -39,6 +39,20 @@
 > - [👏 Acknowledgments](#-acknowledgments)
 
 ---
+## Eeary run
+just follow this steps for use cryptonitbot
+1.
+```bash
+pip install crytonitbot
+```
+2.
+```bash
+export YOUR_BOT_TOKEN=<your token from telegram>
+```
+3.
+```bash
+cryptonitbot
+```
 
 ## 📍 Overview
 
