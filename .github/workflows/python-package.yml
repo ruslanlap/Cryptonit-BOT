@@ -1,15 +1,8 @@
 name: Create Release and Publish to PyPI
-
-# on:
-#   push:
-#     branches:
-#       - master  # or main, depending on your default branch name
 on:
   push:
-    paths:
-      - 'setup.py'
-    tags:
-      - 'v*.*.*'
+    branches:
+      - master  # or main, depending on your default branch name
 jobs:
   release:
     runs-on: ubuntu-latest
