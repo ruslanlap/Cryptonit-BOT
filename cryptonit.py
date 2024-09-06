@@ -72,7 +72,7 @@ def create_main_menu():
     return markup
 
 # Обробник команди /start або HELP
-@bot.message_handler(commands=['startℹ️','start', 'help'])
+@bot.message_handler(commands=['startℹ️', 'start', 'help'])
 def send_welcome(message):
     response = f"👋 Вітаю, {message.from_user.first_name}! Я бот для шифрування/дешифрування. Використовуйте команди нижче або скорочення:\n\n" \
                "🔒 /encrypt або /e - Шифрувати повідомлення\n" \
@@ -129,7 +129,8 @@ def save_encrypted_message(encrypted_message, password, file_path, instructions_
         logging.error(f"Failed to save encrypted message and password: {e}")
 
 # Обробник команди /decrypt
-@bot.message_handler(commands=['decrypt🔓', 'd'])
+# Обробник команди /decrypt
+@bot.message_handler(commands=['decrypt🔓', 'decrypt', 'd'])
 def decrypt_command(message):
     bot.reply_to(message, "🔓 Будь ласка, введіть пароль для дешифрування:")
     bot.register_next_step_handler(message, get_password_for_decryption)
@@ -139,25 +140,24 @@ def get_password_for_decryption(message):
     bot.reply_to(message, "📧 Будь ласка, відправте зашифроване повідомлення для дешифрування:")
     bot.register_next_step_handler(message, lambda msg: decrypt_message(msg, password))
 
+
 def decrypt_message(message, password):
     encrypted_text = message.text
-    decrypted = None  # Ініціалізація змінної
     try:
         decrypted = decrypt(encrypted_text, password)
         escaped_message = escape_markdown_v2(decrypted)
         bot.reply_to(message, f"🔓 Розшифроване повідомлення:\n||{escaped_message}||", parse_mode='MarkdownV2', reply_markup=create_main_menu())
-    except Exception as e:
-        escaped_error = escape_markdown_v2(str(e))
-        bot.reply_to(message, f"⚠️ Помилка дешифрування: {escaped_error}. Переконайтеся, що повідомлення зашифроване правильно.", reply_markup=create_main_menu())
 
-    # Зберігаємо лише якщо дешифрування успішне
-    if decrypted:
+        # Save only if decryption is successful
         file_path = "Decrypted.txt"
         save_decrypted_message(decrypted, password, file_path)
 
-        # Надсилаємо файл як документ
+        # Send the file as a document
         with open(file_path, 'rb') as file:
             bot.send_document(message.chat.id, file, caption="🔓 Ваше розшифроване повідомлення", reply_markup=create_main_menu())
+    except Exception as e:
+        escaped_error = escape_markdown_v2(str(e))
+        bot.reply_to(message, f"⚠️ Помилка дешифрування: {escaped_error}. Переконайтеся, що повідомлення зашифроване правильно.", reply_markup=create_main_menu())
 
 def save_decrypted_message(decrypted_message, password, file_path):
     try:
